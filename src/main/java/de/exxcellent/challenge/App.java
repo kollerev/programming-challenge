@@ -2,6 +2,7 @@ package de.exxcellent.challenge;
 
 import de.exxcellent.challenge.constants.FilePath;
 import de.exxcellent.challenge.parser.CSVParser;
+import de.exxcellent.challenge.service.DataService;
 
 import java.util.List;
 
@@ -20,10 +21,8 @@ public final class App {
     public static void main(String... args) {
 
         // Your preparation code …
-        CSVParser csvParser = new CSVParser();
-        List<List<String>> weatherData = csvParser.readFile(FilePath.weatherFilePath);
 
-        String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
+        int dayWithSmallestTempSpread = DataService.getDayOfSmallestTemperatureSpread();     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
         String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …

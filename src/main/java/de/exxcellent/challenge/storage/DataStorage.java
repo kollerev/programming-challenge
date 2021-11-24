@@ -10,14 +10,6 @@ import java.util.List;
 
 public class DataStorage {
 
-    private List<Weather> storage;
-    private CSVParser csvParser;
-
-    public DataStorage() {
-        List<List<String>> weatherCSVData = csvParser.readFile(FilePath.weatherFilePath);
-        storage = convertStringToWeatherList(weatherCSVData);
-    }
-
     public static List<Weather> convertStringToWeatherList(List<List<String>> csvData) {
         List<Weather> weatherData = new ArrayList<>();
         Weather newWeather;
@@ -34,5 +26,10 @@ public class DataStorage {
             }
         }
         return weatherData;
+    }
+
+    public static List<Weather> getWeatherData() {
+        List<List<String>> weatherCSVData = new CSVParser().readFile(FilePath.weatherFilePath);
+        return convertStringToWeatherList(weatherCSVData);
     }
 }
