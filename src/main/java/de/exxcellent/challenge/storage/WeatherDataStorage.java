@@ -12,7 +12,6 @@ public class WeatherDataStorage {
 
     public static List<Weather> convertStringToWeatherList(List<List<String>> csvData) {
         List<Weather> weatherData = new ArrayList<>();
-        Weather newWeather;
 
         if (csvData.size() > 0) {
             //omit header line and start at index 1

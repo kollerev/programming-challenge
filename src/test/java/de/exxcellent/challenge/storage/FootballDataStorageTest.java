@@ -20,6 +20,6 @@ public class FootballDataStorageTest {
         List<Football> footballData = FootballDataStorage.convertStringToFootballList(csvData);
         assertEquals(footballData.get(0).getTeamName(), "Arsenal");
         assertEquals(footballData.get(0).getGoals(), 79);
-        assertEquals(footballData.get(0).getGoals(), 36);
+        assertEquals(footballData.get(0).getGoalsAllowed(), 36);
     }
 }
