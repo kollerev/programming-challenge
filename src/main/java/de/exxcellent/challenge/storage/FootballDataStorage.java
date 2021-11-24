@@ -1,8 +1,10 @@
 package de.exxcellent.challenge.storage;
 
+import de.exxcellent.challenge.constants.FilePath;
 import de.exxcellent.challenge.constants.Index;
 import de.exxcellent.challenge.data.Football;
 import de.exxcellent.challenge.data.Weather;
+import de.exxcellent.challenge.parser.CSVParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,5 +25,10 @@ public class FootballDataStorage {
             }
         }
         return footballList;
+    }
+
+    public static List<Football> getFootballData() {
+        List<List<String>> footballCSVData = new CSVParser().readFile(FilePath.footballFilePath);
+        return convertStringToFootballList(footballCSVData);
     }
 }

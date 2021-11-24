@@ -8,10 +8,10 @@ import java.util.Objects;
 
 public class Football {
 
-    public String teamName;
-    public int goals;
-    public int goalsAllowed;
-    public int goalsDistance;
+    private String teamName;
+    private int goals;
+    private int goalsAllowed;
+    private int goalsDistance;
 
     public Football(String teamName, int goals, int goalsAllowed, int goalsDistance) {
         this.teamName = teamName;
