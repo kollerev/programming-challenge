@@ -8,6 +8,6 @@ public class WeatherDataServiceTest {
 
     @Test
     void getSmallestWeatherDifference() {
-        assertEquals(14, WeatherDataService.getDayOfSmallestTemperatureSpread());
+        assertEquals(14, WeatherDataService.getDayOfSmallestTemperatureSpread(), "Smallest temperature spread is not correct");
     }
 }

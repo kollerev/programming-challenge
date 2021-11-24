@@ -8,6 +8,6 @@ public class FootballDataServiceTest {
 
     @Test
     void getTeamNameOfSmallestGoalsDistance() {
-        assertEquals("Aston_Villa", FootballDataService.getTeamNameOfSmallestGoalsDistance());
+        assertEquals("Aston_Villa", FootballDataService.getTeamNameOfSmallestGoalsDistance(), "Team name is not correct");
     }
 }

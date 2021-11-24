@@ -17,8 +17,8 @@ public class WeatherDataStorageTest {
     void convertStringToWeatherList() {
         List<List<String>> csvData = csvParser.readFile(FilePath.weatherFilePath);
         List<Weather> weatherData = WeatherDataStorage.convertStringToWeatherList(csvData);
-        assertEquals(weatherData.get(0).getDay(), 1);
-        assertEquals(weatherData.get(0).getMaximumTemperature(), 88);
-        assertEquals(weatherData.get(0).getMinimumTemperature(), 59);
+        assertEquals(weatherData.get(0).getDay(), 1, "Day number was not correct");
+        assertEquals(weatherData.get(0).getMaximumTemperature(), 88, "Maximum temperature was not correct");
+        assertEquals(weatherData.get(0).getMinimumTemperature(), 59, "Minimum temperature was not correct");
     }
 }

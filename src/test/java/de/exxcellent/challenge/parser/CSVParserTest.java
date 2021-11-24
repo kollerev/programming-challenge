@@ -15,24 +15,24 @@ public class CSVParserTest {
     @Test
     void readCSVFile() {
         List<List<String>> csvData = csvParser.readFile(FilePath.testFootballCSVFilePath);
-        assertTrue(csvData.size() > 0);
+        assertTrue(csvData.size() > 0, "CSV File doesn't have values");
     }
 
     @Test
     void getAllLinesFromCSVFile() {
         List<List<String>> csvData = csvParser.readFile(FilePath.testFootballCSVFilePath);
-        assertEquals(4, csvData.size());
+        assertEquals(4, csvData.size(), "Number of lines in CSV file is not correct");
     }
 
     @Test
     void getAllLinesFromWeatherCSVFile() {
         List<List<String>> csvData = csvParser.readFile(FilePath.weatherFilePath);
-        assertEquals(31, csvData.size());
+        assertEquals(31, csvData.size(), "Number of lines in Weather CSV file is not correct");
     }
 
     @Test
     void getAllLinesFromFootballCSVFile() {
         List<List<String>> csvData = csvParser.readFile(FilePath.footballFilePath);
-        assertEquals(21, csvData.size());
+        assertEquals(21, csvData.size(), "Number of lines in Football CSV file is not correct");
     }
 }

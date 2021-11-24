@@ -18,8 +18,8 @@ public class FootballDataStorageTest {
     void convertStringToFootballList() {
         List<List<String>> csvData = csvParser.readFile(FilePath.footballFilePath);
         List<Football> footballData = FootballDataStorage.convertStringToFootballList(csvData);
-        assertEquals(footballData.get(0).getTeamName(), "Arsenal");
-        assertEquals(footballData.get(0).getGoals(), 79);
-        assertEquals(footballData.get(0).getGoalsAllowed(), 36);
+        assertEquals(footballData.get(0).getTeamName(), "Arsenal", "Team  name was not correct");
+        assertEquals(footballData.get(0).getGoals(), 79, "Number of goals was not correct");
+        assertEquals(footballData.get(0).getGoalsAllowed(), 36, "Number of allowed goals was not correct");
     }
 }
