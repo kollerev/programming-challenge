@@ -4,6 +4,7 @@ import de.exxcellent.challenge.data.Football;
 import de.exxcellent.challenge.data.Weather;
 import de.exxcellent.challenge.storage.FootballDataStorage;
 import de.exxcellent.challenge.storage.WeatherDataStorage;
+import de.exxcellent.challenge.utils.CalculationUtils;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class FootballDataService {
         int smallestGoalsDistance = Integer.MAX_VALUE;
         List<Football> data = getFootballData();
         for (int i = 0; i < data.size(); i++) {
-            int teamSmallestGoalsDistance = Math.abs(data.get(i).getGoals() - data.get(i).getGoalsAllowed());
+            int teamSmallestGoalsDistance = CalculationUtils.absoluteDistance(data.get(i).getGoals(), data.get(i).getGoalsAllowed());
             if (teamSmallestGoalsDistance < smallestGoalsDistance) {
                 smallestGoalsDistance = teamSmallestGoalsDistance;
                 teamName = data.get(i).getTeamName();
