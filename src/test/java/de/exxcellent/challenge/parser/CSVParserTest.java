@@ -1,10 +1,6 @@
 package de.exxcellent.challenge.parser;
 
 import de.exxcellent.challenge.constants.FilePath;
-import de.exxcellent.challenge.data.Weather;
-import de.exxcellent.challenge.parser.CSVParser;
-import de.exxcellent.challenge.service.DataService;
-import de.exxcellent.challenge.storage.DataStorage;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,5 +28,11 @@ public class CSVParserTest {
     void getAllLinesFromWeatherCSVFile() {
         List<List<String>> csvData = csvParser.readFile(FilePath.weatherFilePath);
         assertEquals(31, csvData.size());
+    }
+
+    @Test
+    void getAllLinesFromFootballCSVFile() {
+        List<List<String>> csvData = csvParser.readFile(FilePath.footballFilePath);
+        assertEquals(21, csvData.size());
     }
 }

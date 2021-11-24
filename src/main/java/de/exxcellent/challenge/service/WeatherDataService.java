@@ -1,11 +1,11 @@
 package de.exxcellent.challenge.service;
 
 import de.exxcellent.challenge.data.Weather;
-import de.exxcellent.challenge.storage.DataStorage;
+import de.exxcellent.challenge.storage.WeatherDataStorage;
 
 import java.util.List;
 
-public class DataService {
+public class WeatherDataService {
 
     /**
      *
@@ -26,6 +26,6 @@ public class DataService {
     }
 
     public static List<Weather> getWeatherData() {
-        return DataStorage.getWeatherData();
+        return WeatherDataStorage.getWeatherData();
     }
 }

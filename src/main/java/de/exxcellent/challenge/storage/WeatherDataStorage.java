@@ -8,7 +8,7 @@ import de.exxcellent.challenge.parser.CSVParser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataStorage {
+public class WeatherDataStorage {
 
     public static List<Weather> convertStringToWeatherList(List<List<String>> csvData) {
         List<Weather> weatherData = new ArrayList<>();

@@ -1,10 +1,6 @@
 package de.exxcellent.challenge;
 
-import de.exxcellent.challenge.constants.FilePath;
-import de.exxcellent.challenge.parser.CSVParser;
-import de.exxcellent.challenge.service.DataService;
-
-import java.util.List;
+import de.exxcellent.challenge.service.WeatherDataService;
 
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
@@ -22,7 +18,7 @@ public final class App {
 
         // Your preparation code …
 
-        int dayWithSmallestTempSpread = DataService.getDayOfSmallestTemperatureSpread();     // Your day analysis function call …
+        int dayWithSmallestTempSpread = WeatherDataService.getDayOfSmallestTemperatureSpread();     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
         String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
